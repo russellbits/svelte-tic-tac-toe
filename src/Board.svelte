@@ -5,7 +5,7 @@
   let squares = new Array(9).fill(null);
   let xIsNext = true;
   // Note the dollar sign makes status a reactive assignment!
-  $: status = "Next Player: " + (xIsNext ? "X" : "O")
+  $: status = (xIsNext ? "X" : "O") + `'s turn is next.`
 
   function handleClick(i) {
     if(!squares[i]) {
@@ -29,7 +29,7 @@
     for (let i = 0; i < wins.length; i++) {
       const [a, b, c] = wins[i]
       if (squares[a] && squares[a] == squares[b] && squares[a] === squares[c])
-        return `Winner: ${squares[a]}`
+        return `${squares[a]} wins!`
     }
 
     const isDraw = squares.every(square => square !== null)

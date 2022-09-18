@@ -27,7 +27,7 @@
   }
 
   .square:hover {
-    border: 4px solid #3ff;
+    border: 4px solid rgb(252, 255, 0);
   }
 </style>
 
