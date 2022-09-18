@@ -10,6 +10,13 @@
 </script>
 
 <style>
+:root {
+  color: rgba(255, 255, 255, 1);
+  font-family: sans-serif;
+  font-size: 16px;
+  background-color: rgb(30, 30, 30);
+  text-align: center;
+}
 h1 {
   font-family: 'Roboto Slab', serif;
   font-size: 2em;
