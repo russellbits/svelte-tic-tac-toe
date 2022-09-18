@@ -6,7 +6,7 @@
   const intro = `${name}'s Svelte ${gameType}`
   // Import Component
   import GameInstructions from './lib/GameInstructions.svelte'
-  import Board from './Board.svelte'
+  import Board from './lib/Board.svelte'
 </script>
 
 <style>
