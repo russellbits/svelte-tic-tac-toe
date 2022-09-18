@@ -1,23 +1,33 @@
 <script>
-  export let value;
+  export let value
+  export let handleClick
 </script>
 
 <style>
   .square {
-    flex: 1 0 25%;
-    width: 50px;
-    height: 70px;
+    width: 100px;
+    height: 100px;
+    font-family: monospace;
+    font-weight: bold;
+    font-size: 40px;
+    text-align: center;
     background-color: whitesmoke;
     border: 2px solid black;
-    margin: 5px;
+    margin: 2px;
     padding: 5px;
-    font-size: 20px;
-    text-align: center;
+  }
+
+  .X {
+    background-color: rgb(48, 187, 78);
+  }
+
+  .O {
+    background-color: rgb(48, 170, 187);
   }
 
   .square:hover {
-    border: 2px solid red;
+    border: 4px solid #3ff;
   }
 </style>
- 
-<button class="square">{value}</button>
+
+<button id={value} class="square {value}" on:click={handleClick}>{value || ""}</button>
