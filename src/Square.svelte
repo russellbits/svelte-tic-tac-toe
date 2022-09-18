@@ -7,11 +7,12 @@
   .square {
     width: 100px;
     height: 100px;
-    font-family: monospace;
+    color: white;
+    font-family: 'Roboto Slab', serif;
     font-weight: bold;
     font-size: 40px;
     text-align: center;
-    background-color: whitesmoke;
+    background-color: #666;
     border: 2px solid black;
     margin: 2px;
     padding: 5px;

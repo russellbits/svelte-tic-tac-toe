@@ -10,11 +10,18 @@
 </script>
 
 <style>
+h1 {
+  font-family: 'Roboto Slab', serif;
+  font-size: 2em;
+  border-bottom: 1px solid white;
+}
 </style>
 
 <main>
   <!-- Attempted to get this from ./main.js <p>{name} is available as a prop.</p> -->
-  <h1>{intro} is a Svelte experiment for <GameInstructions />.</h1>
+  <h1>{gameType}</h1>
+
+  <GameInstructions />
 
   <div>
     <Board />
