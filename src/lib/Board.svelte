@@ -37,6 +37,12 @@
     const isDraw = squares.every(square => square !== null)
     return isDraw ? "It's a draw!" : null
   }
+
+  function restartGame() {
+    squares = [null, null, null, null, null, null, null, null, null];
+    xIsNext = true;
+    winner = null;
+  }
 </script>
 
 <style>
@@ -63,3 +69,7 @@
     <Square value={square} handleClick={() => squareChoice(i)} />
   {/each}
 </div>
+
+{#if winner}
+  <button on:click={restartGame}>Restart Game</button>
+{/if}
