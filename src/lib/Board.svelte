@@ -4,10 +4,11 @@
   let winner = null
   let squares = new Array(9).fill(null);
   let xIsNext = true;
+
   // Note the dollar sign makes status a reactive assignment!
   $: status = (xIsNext ? "X" : "O") + `'s turn is next.`
 
-  function handleClick(i) {
+  function squareChoice(i) {
     if(!squares[i]) {
       squares[i] = xIsNext ? "X" : "O"
       xIsNext = !xIsNext
@@ -26,6 +27,7 @@
       [0, 4, 8],
       [2, 4, 6]
     ]
+    // This is faster, but for terseness, I would like to see this as a map
     for (let i = 0; i < wins.length; i++) {
       const [a, b, c] = wins[i]
       if (squares[a] && squares[a] == squares[b] && squares[a] === squares[c])
@@ -58,6 +60,6 @@
 
 <div class="board">
   {#each squares as square, i}
-    <Square value={square} handleClick={() => handleClick(i)} />
+    <Square value={square} handleClick={() => squareChoice(i)} />
   {/each}
 </div>
