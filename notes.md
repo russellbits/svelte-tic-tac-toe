@@ -1,10 +1,12 @@
 # TODO
 
-* Finish the article
+* Finish the article?
+
+* Import SVGicons from icons file
 
 * Center the grid and re-size it for different platforms.
 
-* Correct font-size problem in tokens
+~~Correct font-size problem in tokens~~
 
 # Changes to article version:
 
