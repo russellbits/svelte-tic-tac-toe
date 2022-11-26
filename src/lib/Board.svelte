@@ -4,6 +4,7 @@
   let winner = null
   let squares = new Array(9).fill(null);
   let xIsNext = true;
+  let animation = "animate__animated animate__bounce"
 
   // Note the dollar sign makes status a reactive assignment!
   $: status = (xIsNext ? "X" : "O") + `'s turn is next.`
@@ -66,7 +67,7 @@
 
 <div class="board">
   {#each squares as square, i}
-    <Square value={square} handleClick={() => squareChoice(i)} />
+    <Square value={square} animation={animation} handleClick={() => squareChoice(i)} />
   {/each}
 </div>
 

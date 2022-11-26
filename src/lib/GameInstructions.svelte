@@ -8,8 +8,8 @@ p#instructions {
   font-family: 'Noto Serif', serif;
   font-size: 1em;
   text-align: left;
-  text-indent: 1.5em;
-  width: 90%;
+  text-indent: 0;
+  width: 100%;
   color: #ddd;
 }
 </style>

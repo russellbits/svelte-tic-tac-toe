@@ -17,6 +17,19 @@
   background-color: rgb(30, 30, 30);
   text-align: center;
 }
+
+body {
+  color: white;
+  background-color: black;
+  display: flex;
+  height: 100vh;
+}
+
+main {
+  width: 300px;
+  margin: 0 auto;
+}
+
 h1 {
   font-family: 'Roboto Slab', serif;
   font-size: 2em;
@@ -26,7 +39,7 @@ h1 {
 
 <main>
   <!-- Attempted to get this from ./main.js <p>{name} is available as a prop.</p> -->
-  <h1>{gameType}</h1>
+  <h1 class="animate__animated animate__bounce">{gameType}</h1>
 
   <GameInstructions />
 
