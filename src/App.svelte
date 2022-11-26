@@ -1,11 +1,6 @@
 <script>
-  // Pick up prop from main.js
-  export let name
-  const gameType = 'Tic Tac Toe'
-  // Internal static prop
-  const intro = `${name}'s Svelte ${gameType}`
-  // Import Component
-  import GameInstructions from './lib/GameInstructions.svelte'
+  // Import Components
+  import AppMenu from './lib/AppMenu.svelte'
   import Board from './lib/Board.svelte'
 </script>
 
@@ -29,19 +24,11 @@ main {
   width: 300px;
   margin: 0 auto;
 }
-
-h1 {
-  font-family: 'Roboto Slab', serif;
-  font-size: 2em;
-  border-bottom: 1px solid white;
-}
 </style>
 
 <main>
   <!-- Attempted to get this from ./main.js <p>{name} is available as a prop.</p> -->
-  <h1 class="animate__animated animate__bounce">{gameType}</h1>
-
-  <GameInstructions />
+  <AppMenu />
 
   <div>
     <Board />
