@@ -1,12 +1,13 @@
 <script>
   import SvgIcon from './SvgIcon.svelte'
   // Why doesn't this work?
-  //import developer from './vars.js'
-  import { DEVELOPER, FRAMEWORK, GAMETYPE } from './vars.js';
+  import { USER_ICON_PATH, BELL_ICON_PATH } from '../assets/appIcons.js'
+  import { DEVELOPER, FRAMEWORK, GAMETYPE } from '../assets/vars.js';
   const developer = DEVELOPER
   const framework = FRAMEWORK
   const gameType = GAMETYPE
-  const userIcon = `M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z`
+  const userIcon = USER_ICON_PATH
+  const bellIcon = BELL_ICON_PATH
 
   // console.log(developer)
 
@@ -30,6 +31,7 @@ p#instructions {
 </style>
 
 <SvgIcon d={userIcon} fill={`white`} />
+<SvgIcon d={bellIcon} fill={`white`} />
 
 <h1 class="animate__animated animate__bounce">{gameType}</h1>
 
